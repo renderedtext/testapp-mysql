@@ -1,0 +1,32 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: testapp-mysql_development
+  pool: 5
+  username: root
+  password:
+  host: localhost
+
+test: &test
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: testapp-mysql_test
+  pool: 5
+  username: root
+  password:
+  host: localhost
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: testapp-mysql_production
+  pool: 5
+  username: root
+  password:
+  host: localhost
+
+cucumber:
+  <<: *test
